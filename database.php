@@ -1,9 +1,9 @@
 <?php
 //povezava na bazo
-$username = 'root';
-$password = '';
+$username = 'turistika';
+$password = 'turistika';
 $database = 'turistika';
-$server = 'localhost';
+$server = 'turistika.cfko720ljtn3.eu-central-1.rds.amazonaws.com';
 //povezali smo se na bazo
 $link = mysqli_connect($server, $username, $password, $database);
 //težava php in utf-8
