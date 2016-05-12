@@ -21,12 +21,13 @@ Create table destinations (
  Primary Key (id)) ENGINE = MyISAM;
 
 Create table users (
-	id Int NOT NULL AUTO_INCREMENT,
-	email Varchar(100) NOT NULL,
-	pass Varchar(50) NOT NULL,
-	first_name Varchar(50),
-	last_name Varchar(50) NOT NULL,
-	avatar Varchar(200),
+	`id` int(11) NOT NULL,
+	`email` varchar(100) COLLATE utf8_slovenian_ci NOT NULL,
+	`pass` varchar(50) COLLATE utf8_slovenian_ci NOT NULL,
+	`first_name` varchar(50) COLLATE utf8_slovenian_ci DEFAULT NULL,
+	`last_name` varchar(50) COLLATE utf8_slovenian_ci NOT NULL,
+	`avatar` varchar(200) COLLATE utf8_slovenian_ci DEFAULT NULL,
+	`admin` int(11) NOT NULL DEFAULT '0',
 	UNIQUE (email),
  Primary Key (id)) ENGINE = MyISAM;
 
