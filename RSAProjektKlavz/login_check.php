@@ -19,16 +19,17 @@ and open the template in the editor.
         $passwrd=sha1($_POST['passwrd']);
         $query = "SELECT *
                     FROM users u 
-                    WHERE u.username='$username' AND u.passwrd='$password';";
+                    WHERE u.username='$username' AND u.passwrd='$passwrd';";
         $result = mysqli_query($link, $query);
         if(mysqli_num_rows($result)==1){
             $row = mysqli_fetch_array($result);
-            $_SESSION['id']=$row['ID'];
-            $_SESSION['name']=$row['username'];
+            $_SESSION['ID']=$row['ID'];
+            $_SESSION['username']=$row['username'];
             header('Location: index.php');
         }
-        else
-            echo 'Vaše geslo ali uporabniško ime je neveljavno <br/>';
+        else {
+            echo "Prijava ni uspela.";
+        }
         
         ?>
         

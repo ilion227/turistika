@@ -16,6 +16,7 @@ and open the template in the editor.
     </head>
     <body>
         <h1>Pozdravljeni!</h1>
+        <a href="register.php">Registriraj se</a>
         <?php
         // put your code here
         ?>

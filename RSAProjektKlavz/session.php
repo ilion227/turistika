@@ -1,8 +1,8 @@
 <?php
 session_start();
-if(isset($_SESSION['id'])){
-    echo '<div class="top">Prijavljeni ste kot '.$_SESSION['name'].' '.$_SESSION['lname'];
-    echo '  <a href="odjava.php">Odjava</a></div>';
+if(isset($_SESSION['ID'])){
+    echo '<div class="top">Prijavljeni ste kot '.$_SESSION['username'];
+    echo '  <a href="logout.php">Odjava</a></div>';
 }
 else{
         ?>
