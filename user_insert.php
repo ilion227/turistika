@@ -20,9 +20,9 @@
         $query = sprintf("INSERT INTO users (first_name, last_name, email, pass) 
                           VALUES ('$first_name','$last_name','$email','$pass');");
         $result = mysqli_query($link, $query);
-        echo $result;
+        
         //preusmeritev na prijavo
-        //header("Location: login.php");
+        header("Location: login.php");
     }
     else {
         //neustrezni podatki
