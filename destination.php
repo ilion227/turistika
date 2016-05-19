@@ -49,7 +49,12 @@
     $avg = mysqli_fetch_array($result);
     echo '<h3>'.round($avg[0],2).'</h3>';
 ?>
-<div>< </div>
+<div>
+    <form action="travel.php" method="post">
+        <input type="hidden" name="id" value="<?php echo $id; ?>" />
+        <input class="btn btn-default" type="submit" value="Rezerviraj!" />
+    </form>
+</div>
 <div class="pictureGallery">
     <?php 
         if ($_SESSION['admin'] == 1) {

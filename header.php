@@ -55,7 +55,7 @@
                                                 echo '<li><a href="registration.php">Registracija</a></li>';
                                             }
                                             else {
-                                                
+                                                echo '<li><a href="travels.php">Moja potovanja</a></li>';
                                                 echo '<li><a href="logout.php">Odjava ('.
                                                         $_SESSION['first_name'].' )</a></li>';
                                             }
