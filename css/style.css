@@ -904,13 +904,15 @@ div hr {
     /*border-color: black;
     border-width: 2px;
     border-style: solid;*/
-    width: 100%;    
+    width: 100%;
+	margin: 2% auto;
 }
+/*
 
 .destination {    
     /*border-color: red;
     border-width: 2px;
-    border-style: solid;*/
+    border-style: solid;
     width: 30%;
     float: left;
     margin: 10px 0px 0px 15px;
@@ -948,6 +950,11 @@ div hr {
     text-transform: uppercase;
     float: right;
     margin-right: 5px;
+}
+*/
+.destination .panel-body img {
+	max-width: 100%;
+	max-height: 100%;
 }
 
 .ocena {

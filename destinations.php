@@ -14,34 +14,54 @@ $result = mysqli_query($link, $query);
 <?php 
     }
 ?>
-<div id="destinations"> 
+
+
+
+<div id="destinations">
 
 <?php
 while ($row = mysqli_fetch_array($result)) {
-    echo '<div class="destination">';
-        echo '<div class="destination_modify">';
-            echo '<a href="destination_delete.php?id='.$row['did'].'" 
-                onclick="return confirm(\'Ste prepričani?\')">Izbriši</a>';
-            echo ' <a href="destination_edit.php?id='.$row['did'].'">Uredi</a>';
-        echo '</div>';
-        echo '<a href="destination.php?id='.$row['did'].'">';
-        $query = "SELECT * 
+    $query = "SELECT * 
                   FROM pictures 
                   WHERE destionation_id=".$row['did'].'
-                  LIMIT 1'; 
-        //echo $query;
-        $r = mysqli_query($link, $query);
-        $picture = mysqli_fetch_array($r);
-        if (empty($picture['url'])) {
-            echo '<img src="slike/no-photo.jpg" alt="" />';
-        }
-        else {
-            echo '<img src="'.$picture['url'].'" alt=""/>';
-        }        
-        echo '</a>';
-        echo '<span class="destination_name">'.$row['dtitle'].'</span>';
-        echo '<span class="destination_country">'.$row['short'].'</span>';
-    echo '</div>';    
+                  LIMIT 1';
+    //echo $query;
+    $r = mysqli_query($link, $query);
+    $picture = mysqli_fetch_array($r);
+
+    echo '<div class="col-md-3"><div class="destination panel panel-default">
+            <div class="panel-heading">
+                <div><div class="pull-left">'.$row['dtitle'].'</div>
+                <div class="pull-right">'.$row['short'].'</div>
+                <div class="clearfix"></div>
+            </div>
+            </div>
+            <div class="panel-body">
+                <a href="destination.php?id='.$row['did'].'">';
+
+            if (empty($picture['url'])) {
+                   echo '<img src="slike/no-photo.jpg" alt="" />';
+                }
+                else {
+                    echo '<img src="'.$picture['url'].'" alt=""/>';
+                }     
+            echo '</a>
+            </div>
+            <div class="panel-footer">
+                <div class="pull-left">
+                    <a class="btn btn-primary" href="destination.php?id=' . $row['did'] . '">Ogled</a>
+                </div>';
+                if($_SESSION['admin'] === '1'){
+                    echo '
+                <div class="pull-right">
+                    <a class="btn btn-default" href="destination_edit.php?id='.$row['did'].'"><i class="fa fa-pencil"></i></a>
+                    <a class="btn btn-danger" href="destination_delete.php?id='.$row['did'].'" onclick="return confirm(\'Ste prepričani?\')"><i class="fa fa-trash"></i></a>
+                </div>';
+                }
+                echo '<div class="clearfix"></div>
+            </div>
+        </div>
+        </div>';
 }
 ?>
 <div class="clear"></div>
