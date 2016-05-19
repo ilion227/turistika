@@ -20,7 +20,8 @@
     Langitude: <input type="text" name="lat" /><br />
     Longitude: <input type="text" name="alt" /><br />
     <input type="submit" value="Vnesi" />
-    <input type="reset" value="Prekliči" />
+    <input type="reset" value="Počisti" />
+    <a class="btn btn-default pull-right" href="destinations.php">Nazaj</a>
 </form>
 
 <?php
