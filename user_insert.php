@@ -12,15 +12,17 @@
         //vse ok
         $pass = $salt.$pass; //geslu dodam salt
         $pass = sha1($pass); //zakodiram geslo
-        $query = sprintf("INSERT INTO users (first_name, last_name, email, pass) 
-                          VALUES ('%s','%s','%s','$pass')",
-                        mysqli_real_escape_string($link, $first_name),
-                        mysqli_real_escape_string($link, $last_name),
-                        mysqli_real_escape_string($link, $email));
-        mysqli_query($link, $query);
+        $first_name = mysqli_real_escape_string($link, $first_name);
+        $last_name = mysqli_real_escape_string($link, $last_name);
+        $email = mysqli_real_escape_string($link, $email);
         
+        
+        $query = sprintf("INSERT INTO users (first_name, last_name, email, pass) 
+                          VALUES ('$first_name','$last_name','$email','$pass');");
+        $result = mysqli_query($link, $query);
+        echo $result;
         //preusmeritev na prijavo
-        header("Location: login.php");
+        //header("Location: login.php");
     }
     else {
         //neustrezni podatki
