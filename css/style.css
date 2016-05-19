@@ -58,7 +58,8 @@
 	h2.major
 	{
 		position: relative;
-		border-top: solid 5px #e7eae8;
+		border-top: solid 4px #e7eae8;
+		padding-top: 30px;
 	}
 
 		h2.major span
@@ -829,7 +830,7 @@
 
 		#footer h2.major span
 		{
-			background: #f2f5f3;
+			background: rgba(225, 243, 245, 0.2);
 		}
 
 /*********************************************************************************/
@@ -963,4 +964,11 @@ div hr {
 }
 .ocena a:hover span {
     visibility: visible;
+}
+
+/** LIBER CSS **/
+
+#welcome {
+	color: #2DAAE4;
+	text-align: center;
 }

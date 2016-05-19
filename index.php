@@ -2,7 +2,7 @@
     include_once 'header.php';
 ?>
 
-<h1>Dobrodošli na spletni strani</h1>
+<h1 id="welcome">Dobrodošli na spletni strani</h1>
 
 <?php
     include_once 'footer.php';

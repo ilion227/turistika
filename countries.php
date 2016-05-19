@@ -5,9 +5,9 @@ $query = "SELECT * FROM countries";
 $result = mysqli_query($link, $query);
 ?>
 
-<a href="country_add.php">Dodaj državo</a>
+<a class="btn btn-default btn-block" href="country_add.php">Dodaj državo</a>
 
-<table border="1" cellpadding="0" cellspacing="0">
+<table class="table" border="1" cellpadding="0" cellspacing="0">
     <tr>
         <td>ID</td>
         <td>Naslov</td>

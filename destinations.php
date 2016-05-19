@@ -36,7 +36,7 @@ while ($row = mysqli_fetch_array($result)) {
             echo '<img src="slike/no-photo.jpg" alt="" />';
         }
         else {
-            echo '<img src="'.$picture['url'].'" alt="" />';
+            echo '<img src="'.$picture['url'].'" alt=""/>';
         }        
         echo '</a>';
         echo '<span class="destination_name">'.$row['dtitle'].'</span>';
