@@ -10,7 +10,7 @@ $result = mysqli_query($link, $query);
 <?php 
     if ($_SESSION['admin'] == 1) {
 ?>
-<a href="destination_add.php">Dodaj destinacijo</a>
+<a class="btn btn-primary btn-block" href="destination_add.php">Dodaj destinacijo</a>
 <?php 
     }
 ?>
