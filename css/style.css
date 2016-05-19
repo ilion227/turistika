@@ -33,7 +33,7 @@
 
 	body,input,textarea,select
 	{
-		font-family: 'Open Sans', sans-serif;
+		font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
 		font-weight: 400;
 		color: #6b7770;
 		font-size: 11.5pt;
@@ -42,10 +42,10 @@
 	
 	h1, h2, h3, h4, h5, h6
 	{
-		font-family: 'Open Sans Condensed', sans-serif;
+		font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
 		font-weight: 700;
 		text-transform: uppercase;
-		color: #6b7770;
+		color: lightskyblue;
 	}
 
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
@@ -225,15 +225,15 @@
 		{
 			-webkit-appearance: none;
 			display: inline-block;
-			font-family: 'Open Sans Condensed', sans-serif;
-			font-weight: 700;
+			font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+			font-weight: 50;
 			text-transform: uppercase;
 			text-decoration: none;
 			background: #b1ddab;
 			color: #fff;
 			border: 0;
 			line-height: 1em;
-			border-radius: 8px;
+			border-radius: 5px;
 			outline: 0;
 			cursor: pointer;
 			-moz-transition: background-color .2s ease-in-out;
@@ -719,7 +719,7 @@
 	#banner-wrapper
 	{
 		position: relative;
-		background-image:			url('images/overlay.png'),	url('images/overlay.png'),	url('../images/banner.jpg');
+		background-image:url('images/overlay.png'), url('images/overlay.png'), url('../images/(darko)banner.jpg');
 		background-position:		top left,					top left,					center center;
 		background-repeat:			repeat,						repeat,						no-repeat;
 		background-size:			auto,						auto,						cover;
@@ -729,7 +729,7 @@
 	#main-wrapper
 	{
 		background: #fff;
-		border-top: solid 5px #b1ddab;
+		border-top: solid 5px white;
 		border-bottom: solid 5px #c1cac5;
 	}
 	
