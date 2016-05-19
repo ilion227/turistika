@@ -1,0 +1,9 @@
+INSERT INTO turistika.pictures (destionation_id, url, title) VALUES (1, 'slike/20150522090447000000Lighthouse.jpg', 'asdasdasd');
+INSERT INTO turistika.pictures (destionation_id, url, title) VALUES (3, 'slike/20150522090518000000Penguins.jpg', 'asdasdasdasdasd');
+INSERT INTO turistika.pictures (destionation_id, url, title) VALUES (3, 'slike/20150522094140000000Chrysanthemum.jpg', 'sdfsdf');
+INSERT INTO turistika.pictures (destionation_id, url, title) VALUES (3, 'slike/20150522094211000000VSO-LAB7.doc', 'tzhtrzr');
+INSERT INTO turistika.pictures (destionation_id, url, title) VALUES (3, 'slike/20150522100118000000Chrysanthemum.jpg', 'asdasdasd');
+INSERT INTO turistika.pictures (destionation_id, url, title) VALUES (3, 'slike/20150522100126000000Lighthouse.jpg', 'asdasdasdasdasd');
+INSERT INTO turistika.pictures (destionation_id, url, title) VALUES (3, 'slike/20150522100146000000Penguins.jpg', 'asdasdasdasdasd');
+INSERT INTO turistika.pictures (destionation_id, url, title) VALUES (4, 'slike/20150522101340000000Lighthouse.jpg', 'asdasd');
+INSERT INTO turistika.pictures (destionation_id, url, title) VALUES (1, 'slike/20150522101353000000Chrysanthemum.jpg', 'asdasd');

@@ -29,6 +29,7 @@
                 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Karla%7CMontserrat">
                 <!--<link rel="stylesheet" href="css/screen.css">-->
                 <link rel="stylesheet" href="css/lightbox.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	</head>
 	<body class="homepage">
 

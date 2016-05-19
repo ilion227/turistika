@@ -1,0 +1,3 @@
+INSERT INTO turistika.users (id, email, pass, first_name, last_name, avatar, admin) VALUES (1, 'islam.music@gmail.com', '3f36904e6a37768f747cbdf0c63831a84529d738', 'Islam', 'Mušić', null, 1);
+INSERT INTO turistika.users (id, email, pass, first_name, last_name, avatar, admin) VALUES (2, 'qqq@qq.qq', '3149b3a425530c3adf8b8b2daac40d0bf35882bf', 'qqq', 'qqq', null, 0);
+INSERT INTO turistika.users (id, email, pass, first_name, last_name, avatar, admin) VALUES (0, 'janliber1@gmail.com', '603046c064bcd121b281c1fb743ac1c120cd68e0', 'Jan', 'Liber', null, 0);
