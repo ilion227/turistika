@@ -49,6 +49,7 @@
     $avg = mysqli_fetch_array($result);
     echo '<h3>'.round($avg[0],2).'</h3>';
 ?>
+<div>< </div>
 <div class="pictureGallery">
     <?php 
         if ($_SESSION['admin'] == 1) {
