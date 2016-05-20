@@ -1,0 +1,12 @@
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.bg-img {
+  width: 100%;
+  height: 100%;
+  background: url('https://camo.githubusercontent.com/77d51bed58191a49e5900e72fa45d8ab010b41c4/687474703a2f2f692e696d6775722e636f6d2f494d524c6c39442e706e67') center center no-repeat;
+  background-size: cover;
+  padding: 20px;
+}
