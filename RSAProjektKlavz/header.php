@@ -28,7 +28,7 @@ and open the template in the editor.
                           echo '<li class="page_item page-item-9"><a href="logout.php">Odjava ('.$_SESSION['username'].')</a></li>';
                       }
                       else{
-                          echo '<li class="page_item page-item-9"><a href="#">PRIJAVA</a></li>';
+                          echo '<li class="page_item page-item-9"><a href="login.php">PRIJAVA</a></li>';
                           echo '<li class="page_item page-item-9"><a href="register.php">REGISTRACIJA</a></li>';
                       }
                               ?>

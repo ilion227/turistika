@@ -28,13 +28,6 @@
 
 .main-navigation ul.nav-menu.toggled-on li {margin-bottom: 16px;}
 
-.hassubchild:after {
-	content: 'V';
-  padding-left:5px;
-  font-size:7px;
-  color:#147852;
-}
-
 
 
 
