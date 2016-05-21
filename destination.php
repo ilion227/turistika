@@ -17,61 +17,49 @@ $query = "SELECT * FROM destinations WHERE id = $id";
 $result = mysqli_query($link, $query);
 $destination = mysqli_fetch_array($result);
 ?>
-    <h2><?php echo $destination['title'];?>
-        <div class="ocena">
-            <a href="rate.php?id=<?php echo $id; ?>&rate=1">
-                <img src="img/star.png" alt="ocena" />
-                <span>1</span>
-            </a>
-            <a href="rate.php?id=<?php echo $id; ?>&rate=2">
-                <img src="img/star.png" alt="ocena" />
-                <span>2</span>
-            </a>
-            <a href="rate.php?id=<?php echo $id; ?>&rate=3">
-                <img src="img/star.png" alt="ocena" />
-                <span>3</span>
-            </a>
-            <a href="rate.php?id=<?php echo $id; ?>&rate=4">
-                <img src="img/star.png" alt="ocena" />
-                <span>4</span>
-            </a>
-            <a href="rate.php?id=<?php echo $id; ?>&rate=5">
-                <img src="img/star.png" alt="ocena" />
-                <span>5</span>
-            </a>
-        </div>
-    </h2>
 
-    <div>
-        <form action="travel.php" method="post">
-               <input type="hidden" name="id" value="<?php echo $id; ?>" />
-                <input class="btn btn-default" type="submit" value="Rezerviraj!" />
-            </form>
-    </div>
-<?php
-$query = "SELECT AVG(rate) 
+
+    <div id="destination-container">
+        <div id="title-container">
+            <h2><?php echo $destination['title'];?></h2>
+
+            <div class="ocena">
+                <a href="rate.php?id=<?php echo $id; ?>&rate=1">
+                    <img src="img/star.png" alt="ocena" />
+                </a>
+                <a href="rate.php?id=<?php echo $id; ?>&rate=2">
+                    <img src="img/star.png" alt="ocena" />
+                </a>
+                <a href="rate.php?id=<?php echo $id; ?>&rate=3">
+                    <img src="img/star.png" alt="ocena" />
+                </a>
+                <a href="rate.php?id=<?php echo $id; ?>&rate=4">
+                    <img src="img/star.png" alt="ocena" />
+                </a>
+                <a href="rate.php?id=<?php echo $id; ?>&rate=5">
+                    <img src="img/star.png" alt="ocena" />
+                </a>
+
+                <?php
+                $query = "SELECT AVG(rate) 
               FROM rates
               WHERE destination_id = $id";
-$result = mysqli_query($link, $query);
-$avg = mysqli_fetch_array($result);
-echo '<h3>'.round($avg[0],2).'</h3>';
-?>
+                $result = mysqli_query($link, $query);
+                $avg = mysqli_fetch_array($result);
+                echo '<h3>'.round($avg[0],2).'</h3>';
+                ?>
+            </div>
+        </div>
+        <div id="content-container">
+            <div class="pull-right">
+                <form action="travel.php" method="post">
+                    <input type="hidden" name="id" value="<?php echo $id; ?>" />
+                    <input class="btn btn-default" type="submit" value="Rezerviraj!" />
+                </form>
+            </div>
+            <div class="clearfix"></div>
 
-<?php
-if ($_SESSION['admin'] == 1) {
-    ?>
-    <form action="picture_insert.php" method="post" enctype="multipart/form-data">
-        <input type="hidden" name="id" value="<?php echo $id; ?>" />
-        Napis: <input type="text" name="title" /><br />
-        Slika: <input type="file" name="fileToUpload" /><br />
-        <input type="submit" value="Dodaj sliko" />
-    </form>
-    <hr />
-    <?php
-}
-?>
-
-
+        <h2>Slike:</h2>
     <div class="cont">
         <div class="demo-gallery">
             <ul id="lightgallery">
@@ -102,6 +90,20 @@ if ($_SESSION['admin'] == 1) {
             });
         </script>
     </div>
+        <?php
+        if ($_SESSION['admin'] == 1) {
+            ?>
+            <div id="add-image">
+                <form class="form" action="picture_insert.php" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="id" value="<?php echo $id; ?>" />
+                    Napis: <input type="text" name="title" /><br />
+                    Slika: <input type="file" name="fileToUpload" /><br />
+                    <input type="submit" value="Dodaj sliko" />
+                </form>
+            </div>
+            <?php
+        }
+        ?>
     <h5><?php echo getCountryName($destination['country_id']);?></h5>
     <a href="<?php echo $destination['www']; ?>" target="_blank">Povezava</a>
 
@@ -130,7 +132,7 @@ if ($_SESSION['admin'] == 1) {
 
         window.onload = loadScript;
     </script>
-    <div id="googleMap" style="width:500px;height:500px;"></div>
+    <div id="googleMap" style="width:500px;height:500px;"></div></div>
 
     <div class="comments">
         <h2>Komentarji</h2>
@@ -138,7 +140,7 @@ if ($_SESSION['admin'] == 1) {
             <input type="hidden" name="destination_id"
                    value="<?php echo $id; ?>" />
             <textarea name="content" cols="5" rows="5"></textarea>
-            <input type="submit" value="Pošlji" />
+            <input type="submit" value="Komentiraj" />
         </form>
         <?php
         $query = "SELECT *, c.id AS cid 
@@ -152,30 +154,31 @@ if ($_SESSION['admin'] == 1) {
             //preverimo ali gre za sodo ali liho
             //vrstico komentarja
             if ($st%2==0) {
-                echo '<div class="soda">';
+                echo '<div class="comment soda">';
             }
             else {
-                echo '<div class="liha">';
+                echo '<div class="comment liha">';
             }
-            echo '<span class="username">'.
+            if ($row['user_id'] == $_SESSION['user_id']) {
+                echo '<div class="pull-right"><a id="delete-comment" href="comment_delete.php?id='.$row['cid'].'" onclick="return confirm(\'Ste prepričani?\')">
+                <i class="fa fa-times fa-lg"></i></a></div>';        }
+            echo '<div class="content" class="pull-left"><span class="username">'.
                 $row['first_name'].' '.
                 $row['last_name'].
                 '</span> ';
-            echo '<span class="commentdate">'.
+            echo '<span class="commentdate pull-right">'.
                 $row['date_add'].'
               </span>';
-            echo '<hr />';
+            echo '<hr/>';
             echo $row['content'];
             //preverimo ali je trenutno
             //prijavljena oseba, lastnik komentarja
-            if ($row['user_id'] == $_SESSION['user_id']) {
-                echo '<a href="comment_delete.php?id='.$row['cid'].'" onclick="return confirm(\'Ste prepričani?\')">
-                Briši</a>';        }
-            echo '</div>';
+            echo '</div><div class="clearfix"></div></div>';
             $st++; //števec za sode in lihe komentarje
         }
 
         ?>
+    </div>
     </div>
 <?php
 include_once 'footer.php';

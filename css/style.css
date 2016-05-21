@@ -58,13 +58,12 @@
 	h2.major
 	{
 		position: relative;
-		border-top: solid 4px #e7eae8;
+		border-bottom: solid 2px #82eab6;
 		padding-top: 30px;
 	}
 
 		h2.major span
 		{
-			background: #fff;
 			position: relative;
 			display: inline-block;
 		}
@@ -720,7 +719,7 @@
 	#banner-wrapper
 	{
 		position: relative;
-		background-image:url('images/overlay.png'), url('images/overlay.png'), url('../images/(darko)banner.jpg');
+		background-color: #466C95;
 		background-position:		top left,					top left,					center center;
 		background-repeat:			repeat,						repeat,						no-repeat;
 		background-size:			auto,						auto,						cover;
@@ -754,17 +753,10 @@
 /* Banner                                                                        */
 /*********************************************************************************/
 
-	#banner
-	{
-		position: relative;
-		background-color:		rgba(21,28,23,0.85);
-		background-image:		url('images/overlay.png'),	url('images/highlight.png');
-		background-position:	top left,					center center;
-		background-size:		auto,						100% 250%;
-		background-repeat:		repeat,						no-repeat;
-		text-align: center;
-		margin: 0;
-	}
+        #banner {
+            position: relative;
+            text-align: center;
+        }
 
 		#banner h2
 		{
@@ -821,6 +813,10 @@
 
 	#footer
 	{
+        background: #466C95;
+        width: 100%;
+        margin: 0;
+        color: #fff;
 	}
 	
 		#footer a
@@ -830,7 +826,11 @@
 
 		#footer h2.major span
 		{
-			background: rgba(225, 243, 245, 0.2);
+
+		}
+
+		#footer .contact li a:hover, #footer .contact li a:focus {
+			text-decoration: none;
 		}
 
 /*********************************************************************************/
@@ -882,8 +882,17 @@
 }
 
 div.liha {
-    background-color: #E4E7E5;
-    margin: 5px 0px;
+    background-color: #466c94;
+    color: #fff;
+}
+
+div.liha hr, div.soda hr {
+    border-color: #5DAE8B;
+}
+
+div.soda {
+    background-color: #f5f39c;
+    color: #323232;
 }
 
 .username {
@@ -900,12 +909,18 @@ div hr {
 }
 
 /****UREJANJE DESTINACIJ***/
+
+#destinations-container {
+    margin: 2em 0;
+    background: #fff;
+}
+
 #destinations {
     /*border-color: black;
     border-width: 2px;
     border-style: solid;*/
     width: 100%;
-	margin: 2% auto;
+	margin: 2em 0;
 }
 /*
 
@@ -952,9 +967,20 @@ div hr {
     margin-right: 5px;
 }
 */
+
+#destination .panel {
+    margin: 1em auto;
+}
+
+.destination .panel-body {
+    padding: 0px;
+    border-top: 1px solid rgba(182, 182, 182, 1);
+}
+
 .destination .panel-body img {
 	max-width: 100%;
 	max-height: 100%;
+    height: 20em;
 }
 
 .ocena {
@@ -973,9 +999,172 @@ div hr {
     visibility: visible;
 }
 
-/** LIBER CSS **/
+/**
+*
+*     LIBER CSS
+*
+**/
 
 #welcome {
 	color: #2DAAE4;
 	text-align: center;
+}
+
+#main-wrapper {
+    background-color: #F6F49D;
+    border: 0;
+}
+
+.login-container {
+    background: #fff;
+    width: 60%;
+    margin: 0 auto;
+    padding: 4em;
+    border-radius: 2em;
+}
+
+.login {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.register-container {
+    background: #fff;
+    width: 80%;
+    margin: 0 auto;
+    padding: 4em;
+    border-radius: 2em;
+}
+
+#header {
+    background-color: #466C95;
+}
+
+#list-destinations .container {
+    padding: 1em;
+}
+
+#myCarousel {
+    padding: 0;
+}
+#myCarousel .left-float {
+    left: 0;
+    right: auto;
+}
+#myCarousel .right-float {
+    right: 0;
+    left: auto;
+}
+#myCarousel .carousel-control {
+    width: 5%;
+}
+
+#list-destinations {
+    margin: 2em 0;
+}
+
+#list-destinations h2 {
+    color: #fff;
+    text-align: center;
+}
+
+#list-destinations .item img {
+    border-radius: 25px;
+    height: 300px;
+}
+
+#list-destinations .img-container {
+    position: relative;
+}
+
+#list-destinations .col-md-4 {
+    padding: 0 0.5em;
+}
+#list-destinations .item .info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    height: 1em;
+    width: 100%;
+    padding: 2em;
+    text-align: center;
+    color: #fff;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0, 0, 0, 0.05) 25%, rgba(0, 0, 0, 0.10) 50%, rgba(0,0,0, 0.20) 75%, rgba(0,0,0,0.30) 100%);
+}
+
+#list-destinations .info:hover {
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0, 0, 0, 0.0) 25%, rgba(0, 0, 0, 0.25) 50%, rgba(0, 0, 0, 0.51) 75%, rgba(0, 0, 0, 0.75) 100%);
+}
+
+#destination-container {
+    background: #fff;
+    margin: 2em;
+}
+#title-container {
+    background: #466c94;
+    color: #fff;
+    text-align: center;
+    padding: 1em 2em;
+}
+#title-container h2 {
+    padding: 1em;
+}
+#title-container .ocena {
+    padding-bottom: 1em;
+}
+#title-container .ocena a {
+    margin: 0 0.5em;
+}
+
+#content-container {
+    padding: 2em 4em;
+}
+
+#destination-container .comments {
+    padding: 2em 4em;
+    background: #5DAE8B;
+}
+#destination-container .comments input[type=submit] {
+    margin: 1em 0;
+}
+
+#destination-container .comment {
+    padding: 1.4em 1em;
+    margin: 1em 0;
+    border-radius: 12px;
+}
+
+#destination-container .comment .content {
+    max-width: 100%;
+    margin: 0 1.5em 0 0.5em;
+}
+
+#delete-comment {
+    color: red;
+}
+
+#add-image {
+    padding: 2em 4em;
+    border-bottom: 1px solid #7B8780;
+}
+
+#countries-container {
+    background: #fff;
+    padding: 4em 8em;
+}
+#countries-container .btn {
+    margin: 2em 0;
+}
+
+#add-country-container{
+    background: #fff;
+    padding: 4em 8em;
+}
+
+#add-destination-container {
+    background: #fff;
+    padding: 4em 8em;
 }

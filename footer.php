@@ -141,7 +141,7 @@
 	<!-- Copyright -->
 	<div id="copyright">
 		<ul class="menu">
-			<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+			<li>&copy; Turistika 2016</li><li> All rights reserved</li>
 		</ul>
 	</div>
 
@@ -158,6 +158,7 @@
 <script src="http://sachinchoolur.github.io/lightGallery/lightgallery/js/lg-hash.js"></script>
 <script src="http://sachinchoolur.github.io/lightGallery/lightgallery/js/lg-pager.js"></script>
 <script src="http://sachinchoolur.github.io/lightGallery/external/jquery.mousewheel.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script>
 	var _gaq = _gaq || [];
 	_gaq.push(['_setAccount', 'UA-2196019-1']);

@@ -33,7 +33,8 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 		<link rel="stylesheet" href="http://sachinchoolur.github.io/lightGallery/lightgallery/css/lightgallery.css">
 		<link rel="stylesheet" href="css/gallery.css">
-
+		<script src="js/jquery-1.11.0.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
 		<script src="http://sachinchoolur.github.io/lightGallery/lightgallery/js/lightgallery.js"></script>
@@ -48,11 +49,11 @@
 
 		<!-- Header -->
 			<header id="header">
-				<div class="logo container">
-					<div>
-						<!--<h1><a href="index.html" id="logo">TXT</a></h1>-->
-						<p>TURISTIKA - najboljše destinacije ta HIP</p>
-					</div>
+				<!-- Banner -->
+				<div id="banner-wrapper">
+					<section id="banner">
+						<h2>TURISTIKA - NAJBOLJŠE DESTINACIJE TA HIP</h2>
+					</section>
 				</div>
 			</header>
 
@@ -77,15 +78,6 @@
 										
 				</ul>
 			</nav>
-		
-		<!-- Banner -->
-			<div id="banner-wrapper">
-				<!--<section id="banner">
-					<h2>Welcome to TXT by HTML5 UP</h2>
-					<p>A free responsive site template built on HTML5, CSS3, skel, and some other stuff</p>
-					<a href="#" class="button">Alright let's go</a>
-				</section>-->
-			</div>
 
 		<!-- Main -->
 			<div id="main-wrapper">
@@ -118,7 +110,6 @@
 
 							<!-- Features -->
 								<section class="box features">
-									<h2 class="major"><span>Destinacije</span></h2>
 									<div>
                                                                             <?php 
                                                                                 //preverimo za error
