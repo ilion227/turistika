@@ -15,6 +15,7 @@ and open the template in the editor.
         <title>Apartmaji - Domov</title>
         <link type="text/css" rel="stylesheet" href="css/header_style.css" />
         <link type="text/css" rel="stylesheet" href="css/background_style.css" />
+        <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
     </head>
     
     <body>

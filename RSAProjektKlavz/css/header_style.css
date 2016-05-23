@@ -1,10 +1,14 @@
+body{
+    font-family: 'Lato', sans-serif;
+}
+
 /* Navigation Menu */
 .main-navigation {
 	text-align: center;
 	clear: both;
 }
 .main-navigation li {
-	font-size: 12px;
+	font-size: 20px;
 	font-size: 0.8571428571rem;
 	
 }
@@ -86,7 +90,7 @@
 		background: #efefef;
 		border-bottom: 1px solid #ededed;
 		display: block;
-		font-size: 11px;
+		font-size: 20px;
 		font-size: 0.7857142857rem;
 		padding: 8px 10px;
 		padding: 0.5714285714rem 0.7142857143rem;

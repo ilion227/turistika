@@ -2,19 +2,42 @@
 include_once 'header.php';
 ?>
 
-<div>
-  <h1>REGISTRACIJA</h1>
+  
+  <link href='css/register_style.css' rel='stylesheet' type='text/css'>
+  
   <form action="add_user.php" method="POST">
-  <hr>
-            <br />Ime: <input type="text" name="first_name" />
-            <br />Priimek: <input type="text" name="last_name" />
-            <br />Uporabniško ime: <input type="text" name="username" id="username" onClick="checkUsername()"/><span id="availability-status"></span>
-            <br />Geslo: <input type="text" name="passwrd" />
-            <br />Elektronski naslov: <input type="text" name="email" />
-            <br />Telefonska številka: <input type="text" name="telephone" />
-            <br /><input type="submit" name="subm" value="Registracija" />
+    <div class="wrap">
+        <h1>REGISTRACIJA</h1>
+        <div>
+          IME:
+          <input id="firstname" type="text" class="cool" required />
+        </div>
+        <div>
+          PRIIMEK:
+          <input id="lastname" type="text" class="cool" required />
+        </div>
+        <div>
+          UPORABNIŠKO IME:
+          <input id="username" type="text" class="cool" required />
+        </div>
+        <div>
+          GESLO:
+          <input id="passwrd" type="text" class="cool" required />
+        </div>
+        <div>
+          TELEFONSKA ŠTEVILKA
+          <input id="telephone" type="text" class="cool" required />
+        </div>
+        <div>
+          ELEKTRONSKI NASLOV:
+          <input id="email" type="text" class="cool" required  />
+        </div>
+        <div>
+            <input id="submit-button" type="submit" value="REGISTRIRAJ SE" />
+        </div>
+        
+    </div>
   </form>
-</div>
 <?php
 include_once 'footer.php';
 ?>
