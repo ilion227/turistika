@@ -27,6 +27,7 @@ and open the template in the editor.
                     <?php
                       if(isset($_SESSION['ID'])){
                           echo '<li class="page_item page-item-9"><a href="logout.php">Odjava ('.$_SESSION['username'].')</a></li>';
+                          echo '<li class="page_item page-item-9"><a href="apartment_add.php">DODAJ APARTMA</a></li>';
                       }
                       else{
                           echo '<li class="page_item page-item-9"><a href="login.php">PRIJAVA</a></li>';

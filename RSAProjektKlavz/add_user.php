@@ -17,8 +17,6 @@ session_start();
 $query = "SELECT * FROM users WHERE username='$username';";
 $result = mysqli_query($link, $query);
 $row = mysqli_fetch_array($result);
-$_SESSION['username']=$row['username'];
-$_SESSION['ID']=$row['ID'];
 
-header('Location: index.php');
+header('Location: login.php');
  
