@@ -1,0 +1,44 @@
+.wrap, .wrap2{
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    color: #618685;
+    font-weight: bold; 
+    width: 45%;
+    border: solid 2px grey;
+    display: inline-table;
+    padding: 10px;
+}
+.wrap2{
+    float:right;
+}
+h1{
+    font-size: 50px;
+    margin: 0px;
+    padding: 0px;
+    background-color: lightgray;
+}
+
+input[type=text] {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: solid 2px #808080;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+input[type=number]{ 
+    cursor:pointer;
+    width: 60px;
+    height: 60px;
+    color: black;
+    text-align:center;
+    font-size: 20px;
+    font-weight: bold;
+}
+#price_input{
+    width: 20%;
+    height: 40px;
+}
+
