@@ -18,6 +18,17 @@ $result = mysqli_query($link, $query);
 $destination = mysqli_fetch_array($result);
 ?>
 
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <link href="css/mail.css" rel="stylesheet">
+        <form id="form1" action="destination_mail.php" method="POST" >
+            <h2 id="title">Povpraševanje</h2>
+            <p type="Message:"><input name="sporocilo" placeholder="What would you like to tell us.."></input></p>
+            <input type="hidden" name="id" value="<?php echo $id; ?>">
+            <button type="submit" name="submit" id="button">Send Message</button>
+        </form>
+    </div>
+
 
     <div id="destination-container">
         <div id="title-container">
@@ -51,6 +62,9 @@ $destination = mysqli_fetch_array($result);
             </div>
         </div>
         <div id="content-container">
+            <div class="pull-left">
+                <button type="button" class="btn btn-default"  data-toggle="modal" data-target="#myModal"><i class="fa fa-envelope"></i>&nbsp;&nbsp;Kontakt</button>
+            </div>
             <div class="pull-right">
                 <form action="travel.php" method="post">
                     <input type="hidden" name="id" value="<?php echo $id; ?>" />
