@@ -58,19 +58,23 @@
 			</header>
 
 		<!-- Nav -->
+			<?php
+
+			$current_site = basename($_SERVER['SCRIPT_FILENAME'], '.php');
+?>
 			<nav id="nav" class="skel-layers-fixed">
 				<ul>
-					<li class="current"><a href="index.php">Domov</a></li>	
-                                        <li><a href="countries.php">Države</a></li>
-                                        <li><a href="destinations.php">Destinacije</a></li>					
+					<li id="li-index"><a href="index.php">Domov</a></li>
+                                        <li id="li-countries"><a href="countries.php">Države</a></li>
+                                        <li id="li-destinations"><a href="destinations.php">Destinacije</a></li>
                                         <?php 
                                             if (!isset($_SESSION['user_id'])) {
-                                                echo '<li><a href="login.php">Prijava</a></li>';
-                                                echo '<li><a href="registration.php">Registracija</a></li>';
+                                                echo '<li id="li-login"><a href="login.php">Prijava</a></li>';
+                                                echo '<li id="li-registration"><a href="registration.php">Registracija</a></li>';
                                             }
                                             else {
-                                                echo '<li><a href="travels.php">Moja potovanja</a></li>';
-                                                echo '<li><a href="logout.php">Odjava ('.
+                                                echo '<li id="li-travels"><a href="travels.php">Moja potovanja</a></li>';
+                                                echo '<li id="li-logout"><a href="logout.php">Odjava ('.
                                                         $_SESSION['first_name'].' )</a></li>';
                                             }
                                         ?>
@@ -78,6 +82,13 @@
 										
 				</ul>
 			</nav>
+
+<script>
+
+    $(document).ready(function(){
+        $('#li-<?php echo $current_site; ?>').addClass('current');
+    });
+</script>
 
 		<!-- Main -->
 			<div id="main-wrapper">
