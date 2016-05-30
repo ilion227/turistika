@@ -13,6 +13,7 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title>Apartmaji - Domov</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link type="text/css" rel="stylesheet" href="css/header_style.css" />
         <link type="text/css" rel="stylesheet" href="css/background_style.css" />
         <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
@@ -23,7 +24,7 @@ and open the template in the editor.
             <div class="nav-menu">
               <ul>
                 <li class="current_page_item"><a href="index.php" title="Home">DOMOV</a></li>
-                <li class="page_item page-item-26"><a href="#">IZDELKI</a></li>
+                <li class="page_item"><a href="#">IZDELKI</a></li>
                     <?php
                       if(isset($_SESSION['ID'])){
                           echo '<li class="page_item page-item-9"><a href="logout.php">Odjava ('.$_SESSION['username'].')</a></li>';

@@ -18,9 +18,13 @@ include_once 'header.php';
               CENA(na dan):
               <input id="price_input"  name="ppd" type="number" class="cool" required /> €
             </div><br />
-            <div> 
-              Število kopalnic:  <br />
+            <div style="text-align:center; float:left;margin-right: 20px;"> 
+              Število kopalnic  <br />
               <input name="bathrooms" type="number" class="cool" required />
+            </div>
+            <div style="float:left; text-align:center;"> 
+              Število spalnic  <br />
+              <input name="bedrooms" type="number" class="cool" required />
             </div><br />
         </div>
         <div class="wrap2">
