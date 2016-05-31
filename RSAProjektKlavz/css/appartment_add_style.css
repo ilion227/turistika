@@ -42,3 +42,7 @@ input[type=number]{
     height: 40px;
 }
 
+.select_div{
+    margin: 10px;
+    font-family: arial;
+}
