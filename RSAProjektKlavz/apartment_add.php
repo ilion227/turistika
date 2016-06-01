@@ -30,15 +30,15 @@ include_once 'header.php';
               Leto izgradnje
               <input id="price_input" name="year_made" type="number" required />
             </div>
-            <div class="input-group" style="text-align:center;margin-left: 20px;">
+            <div id="internet-div"style="text-align:center;margin-left: 20px;clear:both;">
                 Dostop do interneta:
                 <span class="input-group-addon" >
-                    <input type="checkbox" name="wi-fi">
+                    <input type="checkbox" name="wi-fi" value="true">
                 </span>
               </div>
             <div style="clear:both;"> 
               Opis apartmaja  <br />
-              <textarea name="persons" cols="45" rows="5"></textarea>
+              <textarea name="description" cols="45" rows="5"></textarea>
             </div><br />
         </div>
         <div class="wrap2">
@@ -53,7 +53,7 @@ include_once 'header.php';
                           FROM cities;";
                 $result = mysqli_query($link, $query);
                 while ($row = mysqli_fetch_array($result)) {
-                    echo '<option value="'.$row['id'].'">'.$row['title'].'</option>';
+                    echo '<option value="'.$row['ID'].'">'.$row['title'].'</option>';
                 }
                 ?>
                  </select>
@@ -65,7 +65,7 @@ include_once 'header.php';
                           FROM locations;";
                 $result = mysqli_query($link, $query);
                 while ($row = mysqli_fetch_array($result)) {
-                    echo '<option value="'.$row['id'].'">'.$row['title'].'</option>';
+                    echo '<option value="'.$row['ID'].'">'.$row['title'].'</option>';
                 }
                 ?>
                  </select>
@@ -77,11 +77,12 @@ include_once 'header.php';
                           FROM categories;";
                 $result = mysqli_query($link, $query);
                 while ($row = mysqli_fetch_array($result)) {
-                    echo '<option value="'.$row['id'].'">'.$row['title'].'</option>';
+                    echo '<option value="'.$row['ID'].'">'.$row['title'].'</option>';
                 }
                 ?>
                  </select>
             </div>
+            <button type="submit" class="submit-button">Ustvari apartma</button>
         </div>
         
     </form>

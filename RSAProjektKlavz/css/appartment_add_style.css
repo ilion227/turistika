@@ -3,7 +3,7 @@
     font-family: 'Lato', sans-serif;
     color: #618685;
     font-weight: bold; 
-    width: 45%;
+    width: 49%;
     border: solid 2px grey;
     display: inline-table;
     padding: 10px;
@@ -45,4 +45,24 @@ input[type=number]{
 .select_div{
     margin: 10px;
     font-family: arial;
+}
+.wrap div{
+    border: solid black 0pt;
+    padding: 5px;
+    margin: 5px;
+}
+
+#internet-div{
+    width: 30%
+}
+
+.submit-button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
