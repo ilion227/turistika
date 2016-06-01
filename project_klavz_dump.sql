@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.0.2
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
 -- Gostitelj: 127.0.0.1
--- Čas nastanka: 25. maj 2016 ob 09.30
--- Različica strežnika: 10.0.17-MariaDB
--- Različica PHP: 5.6.14
+-- Čas nastanka: 01. jun 2016 ob 09.36
+-- Različica strežnika: 10.1.13-MariaDB
+-- Različica PHP: 7.0.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -42,6 +42,13 @@ CREATE TABLE `appartments` (
   `address` varchar(100) COLLATE utf8_slovenian_ci NOT NULL,
   `wifi_available` tinyint(1) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci;
+
+--
+-- Odloži podatke za tabelo `appartments`
+--
+
+INSERT INTO `appartments` (`ID`, `user_ID`, `city_ID`, `location_ID`, `category_ID`, `title`, `description`, `bedrooms`, `bathrooms`, `persons`, `ppd`, `year_made`, `address`, `wifi_available`) VALUES
+(1, 1, 155, 1, 1, 'Testni', 'lep', 2, 2, 5, 233, 1990, 'Koperska ulica', 1);
 
 -- --------------------------------------------------------
 
@@ -724,7 +731,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT tabele `appartments`
 --
 ALTER TABLE `appartments`
-  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT tabele `categories`
 --
