@@ -133,6 +133,10 @@ $destination = mysqli_fetch_array($result);
         <?php echo $destination['description']; ?>
     </p>
 
+            <?php if(isset($destination['iframe'])){
+                echo '<iframe width="560" height="315" src="'. $destination['iframe'] . '" frameborder="0" allowfullscreen></iframe>';
+            } ?>
+
     <div class="comments">
         <h2>Komentarji</h2>
         <form action="comment_insert.php" method="post">
