@@ -62,9 +62,20 @@ $result = mysqli_query($link, $query);
         </div>
         </div></a>';
         }
-        ?>
-        <div class="clear"></div>
-    </div>
+        else {
+            echo '<img src="'.$picture['url'].'" alt="" />';
+        }        
+        echo '</a>';
+        echo '<span class="destination_name">'.$row['dtitle'].'</span>';
+        echo '<span class="destination_country">'.$row['short'].'</span>';
+    echo '</div>';    
+}
+if(mysqli_num_rows($result) === 0){
+    echo '<h1>Niste prijavljeni na nobeno destinacijo';
+}
+?>
+<div class="clear"></div>
+</div>
 
 <?php
 include_once 'footer.php';

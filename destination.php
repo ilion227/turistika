@@ -125,29 +125,6 @@ $destination = mysqli_fetch_array($result);
         <?php echo $destination['description']; ?>
     </p>
 
-    <script>
-        function initialize()
-        {
-            var mapProp = {
-                center: new google.maps.LatLng(<?php echo $destination['lat']; ?>,<?php echo $destination['alt']; ?>),
-                zoom:12,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-        }
-
-        function loadScript()
-        {
-            var script = document.createElement("script");
-            script.type = "text/javascript";
-            script.src = "http://maps.googleapis.com/maps/api/js?key=&sensor=false&callback=initialize";
-            document.body.appendChild(script);
-        }
-
-        window.onload = loadScript;
-    </script>
-    <div id="googleMap" style="width:500px;height:500px;"></div></div>
-
     <div class="comments">
         <h2>Komentarji</h2>
         <form action="comment_insert.php" method="post">

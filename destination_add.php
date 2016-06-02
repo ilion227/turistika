@@ -18,8 +18,6 @@
             </select>
             Opis: <textarea name="description" cols="5" rows="10" placeholder="Vnesi opis ..."></textarea><br/>
             Spletna stran: <input type="text" name="www"/><br/>
-            Langitude: <input type="text" name="lat"/><br/>
-            Longitude: <input type="text" name="alt"/><br/>
             <input type="submit" value="Vnesi"/>
             <input type="reset" value="Počisti"/>
             <a class="btn btn-default pull-right" href="destinations.php">Nazaj</a>
