@@ -52,7 +52,6 @@ if ($_SESSION['admin'] == 1) {
             <div class="panel-footer">
                 <div class="pull-left">
                     <a class="btn btn-default" href="destination.php?id=' . $row['did'] . '">Ogled</a>
-                    <a class="btn btn-default" href="destination_mail.php?id='.$row['did'].'"><i class="fa fa-envelope"></i></a>
                 </div>';
             if($_SESSION['admin'] === '1'){
                 echo '

@@ -48,10 +48,10 @@ $mail->Body    = '<h1>' . $sporocilo . '</h1>';
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 if(!$mail->send()) {
-    echo 'Message could not be sent.';
     echo 'Mailer Error: ' . $mail->ErrorInfo;
+    header("Location: index.php");
 } else {
-    echo 'Message has been sent';
+
 }
 
 ?>
