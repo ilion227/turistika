@@ -1159,12 +1159,36 @@ div hr {
     margin: 2em 0;
 }
 
-#add-country-container{
+#add-country-container, #edit-destination-container{
     background: #fff;
     padding: 4em 8em;
 }
 
-#add-destination-container {
+#add-destination-container, #edit-destination-container {
     background: #fff;
     padding: 4em 8em;
+}
+
+#small-image {
+	height: 48px;
+	width: 48px;
+	float: left;
+	margin: 0 16px 0 4px;
+}
+
+.index-carousel {
+	margin: 40px auto;
+}
+
+.index-chart {
+	margin: 40px auto;
+	width: 400px;
+}
+
+.divider {
+	border: 1px solid #777777;
+}
+
+#max_users {
+	color: #2DAAE4 !important;
 }

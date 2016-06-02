@@ -11,7 +11,7 @@
     
     echo "<h2>Odločili ste se za potovanje na lokacijo: ".$destination['title']."</h2>";
 ?>
-<div>
+<div style="margin:3%;">
     <h3>Preden odpotujete Vas prosimo, da vnesete nekaj podatkov, da bomo lažje organizirali vaše potovanje.</h3>
     <form action="travel_add.php" method="POST">
         Vnesite datum, kdaj nas želite obiskati: <input type="date" name="travel_date" />

@@ -138,6 +138,7 @@
 		</div>
 	</div>
 
+
 	<!-- Copyright -->
 	<div id="copyright">
 		<ul class="menu">
@@ -159,6 +160,12 @@
 <script src="http://sachinchoolur.github.io/lightGallery/lightgallery/js/lg-pager.js"></script>
 <script src="http://sachinchoolur.github.io/lightGallery/external/jquery.mousewheel.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+
+
+
+
+
 <script>
 	var _gaq = _gaq || [];
 	_gaq.push(['_setAccount', 'UA-2196019-1']);
@@ -169,6 +176,88 @@
 		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	})();
+
+
+	/** CHART **/
+
+	var destinations = [];
+	var userCount = [];
+
+	var usersDestinations = [];
+	var maxUsers = {
+		"destination": "",
+		"users": 0
+	};
+
+		<?php
+		$query = "SELECT DISTINCT d.title, COUNT(DISTINCT user_id) AS user_count FROM travels t INNER JOIN users u ON t.user_id = u.id INNER JOIN destinations d ON t.destination_id = d.id GROUP BY title";
+		$result = mysqli_query($link, $query);
+
+		while($row = mysqli_fetch_assoc($result)){
+			?>
+
+		destinations.push("<?php echo $row['title']; ?>");
+		userCount.push(<?php echo $row['user_count']; ?>);
+
+	<?php
+		}
+
+		?>
+
+	var dynamicColor = function() {
+		var r = Math.floor(Math.random() * ((255 - 80) + 80));
+		var g = Math.floor(Math.random() * ((255 - 80) + 80));
+		var b = Math.floor(Math.random() * ((255 - 80) + 80));
+		return "rgb(" + r + "," + g + "," + b + ")";
+	};
+
+	var getMaxUsers = function() {
+		for(var i = 0; i < destinations.length; i++){
+			usersDestinations.push({"name": destinations[i], "users": userCount[i]});
+		}
+		usersDestinations.forEach( function(entry){
+			if(entry.users > maxUsers.users){
+				maxUsers.destination = entry.name;
+				maxUsers.users = entry.users;
+		}
+		}, this);
+	};
+	getMaxUsers();
+
+
+	console.log(destinations);
+	console.log(userCount);
+	console.log(usersDestinations);
+	console.log(maxUsers);
+
+	var colors = [];
+	userCount.forEach(function(){
+		colors.push(dynamicColor());
+	});
+
+	var data = {
+		labels: destinations,
+		datasets: [
+			{
+				data: userCount,
+				backgroundColor: colors
+			}]
+	};
+	var ctx = $("#myChart");
+	var chart = new Chart(ctx, {
+		type: 'pie',
+		data: data,
+		options: {
+			responsive: true,
+			maintainAspectRatio: true,
+			scales: {
+				drawBorder: true
+			}
+		}
+	});
+
+	$("#max_users").text('Največ uporabnikov se je prijavilo na: ' + maxUsers.destination);
+
 </script>
 
 </body>
