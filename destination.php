@@ -130,7 +130,7 @@ $destination = mysqli_fetch_array($result);
         <form action="comment_insert.php" method="post">
             <input type="hidden" name="destination_id"
                    value="<?php echo $id; ?>" />
-            <textarea name="content" cols="5" rows="5"></textarea>
+            <textarea name="content" cols="5" rows="5" required="required"></textarea>
             <input type="submit" value="Komentiraj" />
         </form>
         <?php

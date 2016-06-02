@@ -205,9 +205,9 @@
 		?>
 
 	var dynamicColor = function() {
-		var r = Math.floor(Math.random() * 255);
-		var g = Math.floor(Math.random() * 255);
-		var b = Math.floor(Math.random() * 255);
+		var r = Math.floor(Math.random() * ((255 - 80) + 80));
+		var g = Math.floor(Math.random() * ((255 - 80) + 80));
+		var b = Math.floor(Math.random() * ((255 - 80) + 80));
 		return "rgb(" + r + "," + g + "," + b + ")";
 	};
 
@@ -256,7 +256,7 @@
 		}
 	});
 
-	$("#max_users").text('Največ uporabnikov se je prijavilo na: ' + maxUsers.destination + ' (' + maxUsers.users + ') .');
+	$("#max_users").text('Največ uporabnikov se je prijavilo na: ' + maxUsers.destination);
 
 </script>
 
