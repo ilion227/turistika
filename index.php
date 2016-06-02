@@ -5,7 +5,7 @@
 
     <div id="list-destinations">
     <div class="container">
-        <div class="">
+        <div class="index-carousel">
             <div class="carousel slide" id="myCarousel">
                 <div class="carousel-inner">
                     <?php
@@ -46,7 +46,13 @@
             </div>
         </div>
 
+        <div class="divider"></div>
 
+        <div class="index-chart">
+            <canvas id="myChart" width="200" height="200"></canvas>
+        </div>
+
+        <div><h2 id="max_users"></h2></div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>

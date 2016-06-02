@@ -42,6 +42,9 @@ while ($row = mysqli_fetch_array($result)) {
         echo '<span class="destination_country">'.$row['short'].'</span>';
     echo '</div>';    
 }
+if(mysqli_num_rows($result) === 0){
+    echo '<h1>Niste prijavljeni na nobeno destinacijo';
+}
 ?>
 <div class="clear"></div>
 </div>
