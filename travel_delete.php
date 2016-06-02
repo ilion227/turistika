@@ -1,13 +1,11 @@
 <?php
-    include_once 'database.php';
-    include_once 'session.php';
+include_once 'database.php';
+include_once 'session.php';
     
-    $destination_id = (int) $_POST['destination_id'];
+    $id = (int) $_GET['id'];
     $user = $_SESSION['user_id'];
-    $travel_date = $_POST['travel_date'];
     
-    $query = sprintf("INSERT INTO travels (travel_date, user_id, destination_id) 
-                   VALUES ('$travel_date','$user','$destination_id');");
+    $query = sprintf("DELETE FROM travels WHERE id=$id AND user_id=$user;");
     $result = mysqli_query($link, $query);
     
     header("Location: travels.php");
