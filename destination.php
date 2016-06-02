@@ -115,6 +115,14 @@ $destination = mysqli_fetch_array($result);
                     <input type="submit" value="Dodaj sliko" />
                 </form>
             </div>
+        
+        <div id="add-video">
+                <form class="form" action="video_insert.php" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="id" value="<?php echo $id; ?>" />
+                    Video URL : <input type="text" name="url" required /><br />
+                    <input type="submit" value="Dodaj video" />
+                </form>
+            </div>
             <?php
         }
         ?>
