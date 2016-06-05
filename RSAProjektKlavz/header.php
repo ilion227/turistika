@@ -24,7 +24,7 @@ and open the template in the editor.
             <div class="nav-menu">
               <ul>
                 <li class="current_page_item"><a href="index.php" title="Home">DOMOV</a></li>
-                <li class="page_item"><a href="#">IZDELKI</a></li>
+                <li class="page_item"><a href="products.php">IZDELKI</a></li>
                     <?php
                       if(isset($_SESSION['ID'])){
                           echo '<li class="page_item page-item-9"><a href="logout.php">Odjava ('.$_SESSION['username'].')</a></li>';

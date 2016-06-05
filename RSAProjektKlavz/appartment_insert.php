@@ -18,7 +18,7 @@ $address = $_POST['address'];
 if(isset($_POST['wi-fi']))
     $wifi_available = TRUE;
 else 
-    $wifi_available = FALSE;
+    $wifi_available = 0;
 
 $query = "INSERT INTO appartments(user_ID, city_ID, location_ID, category_ID, title, description, bedrooms, bathrooms, persons, ppd, year_made, address, wifi_available)
                            VALUES($user_id, $city_id, $location_id, $category_id, '$title', '$description',$bedrooms,$bathrooms, $persons, $ppd, $year_made, '$address', $wifi_available);";

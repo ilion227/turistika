@@ -1,0 +1,23 @@
+#products_list{
+    width: 70%;
+    border: solid black 2px;
+    float: left;
+}
+#products_list *{
+    border: solid black 1px;
+}
+.product_div{
+    margin: 2%;
+    padding: 2%;
+    background-color: cornflowerblue;
+}
+.img_div{
+    width:49%;
+    height: 100%;
+    padding: 2%;
+    display: inline-block;
+}
+.product_info_div{
+    display: inline-block;
+    width: 50%
+}
