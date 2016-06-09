@@ -985,7 +985,6 @@ div hr {
 
 .ocena {
     display: inline-block;
-    margin-left: 15px;
 }
 
 .ocena img {
@@ -1102,18 +1101,33 @@ div hr {
 #destination-container {
     background: #fff;
     margin: 2em;
+	box-shadow: 1px 1px 16px #333;
+
 }
 #title-container {
-    background: #466c94;
-    color: #fff;
+    color: #000;
     text-align: center;
-    padding: 1em 2em;
+	box-shadow: 0px 1px 4px #333;
 }
-#title-container h2 {
-    padding: 1em;
+#title-container .title h2 {
+	color: #000;
 }
+#title-container .title h5 {
+	color: #fff;
+}
+#title-container .title {
+	background: #466c94;
+	padding: 1em;
+}
+#title-container h5 {
+	padding: 1em;
+	font-weight: 600;
+}
+
 #title-container .ocena {
-    padding-bottom: 1em;
+	padding: 1em;
+    width: 100%;
+	background: #5DAE8B;
 }
 #title-container .ocena a {
     margin: 0 0.5em;
@@ -1168,7 +1182,10 @@ div hr {
     background: #fff;
     padding: 4em 8em;
 }
-
+#travel-container {
+	background: #fff;
+	padding: 4em 8em;
+}
 #small-image {
 	height: 48px;
 	width: 48px;
@@ -1183,6 +1200,21 @@ div hr {
 .index-chart {
 	margin: 40px auto;
 	width: 400px;
+}
+
+#add-video {
+	padding: 2em 4em;
+	border-bottom: 1px solid #7B8780;
+}
+
+#destination-description {
+	padding: 1em;
+}
+
+.iframe {
+	width: 60%;
+	margin: 4em auto;
+	text-align: center;
 }
 
 .divider {
