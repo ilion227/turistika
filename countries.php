@@ -7,7 +7,7 @@ $result = mysqli_query($link, $query);
 
 <div id="countries-container" class="container">
   <?php  if($_SESSION['admin'] === '1'){ ?>
-    <a class="btn btn-default btn-block" href="country_add.php">Dodaj državo</a>
+    <a class="btn btn-primary btn-block" href="country_add.php">Dodaj državo</a>
   <?php } ?>
 <table class="table" border="1" cellpadding="0" cellspacing="0">
     <tr>

@@ -112,7 +112,7 @@ $destination = mysqli_fetch_array($result);
         </div>
         <div class="clearfix"></div>
 
-        <div style="text-align: center; padding: 2em;"><h2>Opis:</h2>
+        <div style="text-align: center; padding: 2em;"><h2>Opis</h2>
         <p>
             <?php echo $destination['description']; ?>
         </p></div>
