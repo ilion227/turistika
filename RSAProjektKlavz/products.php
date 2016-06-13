@@ -1,7 +1,6 @@
 <?php
 include_once 'header.php';
 ?>
-<link href='css/index_style.css' rel='stylesheet' type='text/css'>
 <link href='css/products_style.css' rel='stylesheet' type='text/css'>
 
 
@@ -16,9 +15,9 @@ include_once 'header.php';
             ?>
     <div class="product_div">
         <div class="product_info_div">
-        <h3><?php echo $row['title']; ?></h3>
-        <p>Število oseb: <?php echo $row['persons']; ?></p>
-        <p><?php echo $row['description']; ?></p>
+            <h3><a href="appartment.php?id=<?php echo $row['ID']; ?>"><?php echo $row['title']; ?></a></h3>
+            <p>Število oseb: <?php echo $row['persons']; ?></p>
+            <p><?php echo $row['description']; ?></p>
         </div>
         <div class="img_div"></div>
     </div>

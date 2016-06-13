@@ -1,0 +1,15 @@
+#product_div{
+    width: 80%;
+    border: solid black 1px;
+    float: left;
+}
+#product_div div{
+    border: solid black 1px;
+    margin: 2%;
+    padding: 2%;
+}
+
+#desc{
+    background-color: #66ff66;
+}
+

@@ -1,10 +1,10 @@
 #products_list{
-    width: 70%;
+    width: 80%;
     border: solid black 2px;
     float: left;
 }
 #products_list *{
-    border: solid black 1px;
+    border: solid black 0px;
 }
 .product_div{
     margin: 2%;
